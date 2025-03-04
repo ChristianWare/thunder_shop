@@ -1,15 +1,29 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import {
+  Inter_Tight,
+  Barlow_Condensed,
+  Barlow_Semi_Condensed,
+} from "next/font/google";
 import "./globals.css";
+import { Nav } from "@/components/Nav/Nav";
+import { ModalProvider } from "@/context/ModalContext";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const interTight = Inter_Tight({
+  variable: "--interTight",
   subsets: ["latin"],
+  weight: ["400", "500", "600"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const barlowCondensed = Barlow_Condensed({
+  variable: "--barlowCondensed",
   subsets: ["latin"],
+  weight: ["100", "400", "500", "600", "700", "800"],
+});
+
+const barlowSemiCondensed = Barlow_Semi_Condensed({
+  variable: "--barlowSemiCondensed",
+  subsets: ["latin"],
+  weight: ["700"],
 });
 
 export const metadata: Metadata = {
@@ -23,11 +37,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang='en'>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${interTight.variable} ${barlowCondensed.variable} ${barlowSemiCondensed.variable}`}
       >
-        {children}
+        <ModalProvider>
+          <Nav />
+          {children}
+        </ModalProvider>
       </body>
     </html>
   );
