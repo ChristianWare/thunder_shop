@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
+import styles from "./ProductCard.module.css";
 import Image from "next/image";
 import Link from "next/link";
-import styles from "./ProductCard.module.css";
 
 interface Props {
   product: any;
@@ -10,11 +10,8 @@ interface Props {
 export default function ProductCard({ product }: Props) {
   return (
     <div className={styles.container}>
-      <Link href='/'>
-        <h3 className={styles.heading}>
-          Turbo Como SL 5.0 - Smoke /
-          <br /> Transparent
-        </h3>
+      <Link href={`/product/${product.slug}`} className={styles.link}>
+        <h3 className={styles.productName}>{product.name}</h3>
         <span className={styles.model}>Diamond</span>
         <div className={styles.imgContainer}>
           <Image
@@ -28,8 +25,10 @@ export default function ProductCard({ product }: Props) {
         </div>
         <div className={styles.details}>
           <div className={styles.left}>
-            <div className={styles.strikeThrough}>$4,250.00 USD</div>
-            <div className={styles.price}>$2,349.00 USD</div>
+            {/* <div className={styles.strikeThrough}>$4,250.00 USD</div> */}
+            <div className={styles.price}>
+              {product.stock > 0 ? <>${product.price}</> : <span className={styles.outofStock}>Out of Stock</span>}
+            </div>
           </div>
           <div className={styles.right}>
             <div className={styles.btn}>new</div>

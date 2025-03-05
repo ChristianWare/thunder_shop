@@ -13,6 +13,14 @@
   border-left: none;
 }
 
+.link {
+  width: 100%;
+}
+
+.productName {
+  width: 70%;
+}
+
 .model {
   text-transform: capitalize;
   opacity: 0.5;
@@ -27,6 +35,7 @@
 
 .img {
   object-fit: contain;
+  padding: 3rem;
 }
 
 .details {
@@ -62,6 +71,11 @@
   display: block;
 }
 
+.outofStock {
+  color: var(--red);
+  font-weight: bold;
+}
+
 .right {
   display: flex;
 }
@@ -79,4 +93,10 @@
 .btnii {
   border: 1px solid var(--red);
   color: var(--red);
+}
+
+@media screen and (max-width: 968px) {
+  .productName {
+    width: 100%;
+  }
 }

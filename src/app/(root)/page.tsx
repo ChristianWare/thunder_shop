@@ -7,10 +7,10 @@ export default function Home() {
 
   return (
     <main>
-      <Hero />
+      <Hero data={sampleData.products} limit={1} />
       <ProductList
         data={sampleData.products}
-        title='Newest Arrivals'
+        title='New Arrivals'
         limit={4}
       />
     </main>

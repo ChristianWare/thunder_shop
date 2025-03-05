@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
+import styles from "./ProductList.module.css";
 import Link from "next/link";
 import LayoutWrapper from "../../LayoutWrapper";
-import styles from "./ProductList.module.css";
 import ProductCard from "../ProductCard/ProductCard";
 
 interface Props {
@@ -25,7 +25,6 @@ export default function ProductList({ data, title, limit }: Props) {
         {data.length > 0 ? (
           <div className={styles.content}>
             {limitedData.map((product: any) => (
-              //   <div key={index}>{product.name}</div>
               <ProductCard key={product.slug} product={product} />
             ))}
           </div>

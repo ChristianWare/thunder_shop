@@ -1,10 +1,19 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import LayoutWrapper from "../../shared/LayoutWrapper";
 import styles from "./Hero.module.css";
 // import ProductPreview from "../../shared/ProductPreview/ProductPreview";
 import ScrollHorizontalText from "../../shared/ScrollHorizontalText/ScrollHorizontalText";
 import Thunder from "../../../../public/icons/lightning.svg";
+import ProductCard from "@/components/shared/Product/ProductCard/ProductCard";
 
-export default function Hero() {
+interface Props {
+  data: any;
+  limit?: number;
+}
+
+export default function Hero({ data, limit }: Props) {
+  const limitedData = limit ? data.slice(0, limit) : data;
+
   return (
     <section className={styles.container}>
       <LayoutWrapper>
@@ -23,7 +32,11 @@ export default function Hero() {
                 Your shop for bicycles <br /> and e-bikes in SWitzerland.
               </p>
             </div>
-            <div className={styles.right}>{/* <ProductPreview /> */}</div>
+            <div className={styles.right}>
+              {limitedData.map((product: any) => (
+                <ProductCard key={product.slug} product={product} />
+              ))}
+            </div>
           </div>
         </div>
         <ScrollHorizontalText text='Returns extends over a period of 14 days' />
