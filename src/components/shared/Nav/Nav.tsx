@@ -6,7 +6,7 @@ import Link from "next/link";
 import SearchBar from "../SearchBar/SearchBar";
 import NavbarIcons from "../NavbarIcons/NavbarIcons";
 import { useEffect, useState } from "react";
-import Plus from "../../../public/icons/plus.svg";
+import Plus from "../../../../public/icons/plus.svg";
 
 export function Nav() {
   const [isOpen, setIsOpen] = useState(false);

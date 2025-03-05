@@ -1,6 +1,6 @@
 import Link from "next/link";
 import styles from "./Logo.module.css";
-import Thunder from "../../../public/icons/lightning.svg";
+import Thunder from "../../../../public/icons/lightning.svg";
 
 export default function Logo() {
   return (

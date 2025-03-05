@@ -2,9 +2,9 @@
 
 import styles from "./NavbarIcons.module.css";
 import { useState } from "react";
-import Cart from "../../../public/icons/cart.svg";
-import User from "../../../public/icons/user.svg";
-import Bell from "../../../public/icons/bell.svg";
+import Cart from "../../../../public/icons/cart.svg";
+import User from "../../../../public/icons/user.svg";
+import Bell from "../../../../public/icons/bell.svg";
 import Modal from "../Modal/Modal";
 import Link from "next/link";
 

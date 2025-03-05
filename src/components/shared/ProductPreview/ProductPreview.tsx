@@ -1,6 +1,6 @@
 import styles from "./ProductPreview.module.css";
 import Image from "next/image";
-import Model from "../../../public/images/model.webp";
+import Model from "../../../../public/images/model.webp";
 
 export default function ProductPreview() {
   return (

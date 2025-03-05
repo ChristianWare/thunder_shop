@@ -2,7 +2,7 @@ import styles from "./FeaturedProducts.module.css";
 import { getWixServerClient } from "@/lib/wix-client.server";
 import { getCollectionBySlug } from "@/wix-api/collections";
 import { queryProducts } from "@/wix-api/products";
-import Product from "@/components/Product/Product";
+import Product from "@/components/shared/Product/Product";
 import LayoutWrapper from "../LayoutWrapper";
 
 export default async function FeaturedProducts() {

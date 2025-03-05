@@ -1,7 +1,7 @@
 "use client";
 
 import styles from "./SearchBar.module.css";
-import SearchIcon from "../../../public/icons/search.svg";
+import SearchIcon from "../../../../public/icons/search.svg";
 import { useRouter } from "next/navigation";
 
 interface SearchBarProps {

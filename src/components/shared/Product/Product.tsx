@@ -2,7 +2,7 @@
 /* eslint-disable @next/next/no-img-element */
 import { products } from "@wix/stores";
 import { Link } from "next-view-transitions";
-import WixImage from "../WixImage";
+import WixImage from "../../WixImage";
 import { formatCurrency } from "@/lib/utils";
 import styles from "./Product.module.css";
 

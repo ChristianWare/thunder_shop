@@ -1,8 +1,8 @@
-import LayoutWrapper from "../LayoutWrapper";
+import LayoutWrapper from "../../shared/LayoutWrapper";
 import styles from "./Hero.module.css";
-import ProductPreview from "../ProductPreview/ProductPreview";
-import ScrollHorizontalText from "../ScrollHorizontalText/ScrollHorizontalText";
-import Thunder from "../../../public/icons/lightning.svg";
+import ProductPreview from "../../shared/ProductPreview/ProductPreview";
+import ScrollHorizontalText from "../../shared/ScrollHorizontalText/ScrollHorizontalText";
+import Thunder from "../../../../public/icons/lightning.svg";
 
 export default function Hero() {
   return (

@@ -1,10 +1,9 @@
 "use client";
 
 import styles from "./ShopPageIntro.module.css";
-import LayoutWrapper from "../LayoutWrapper";
+import LayoutWrapper from "../shared/LayoutWrapper";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-
 
 const data = [
   {
@@ -32,12 +31,12 @@ const data = [
 export default function ShopPageIntro() {
   const pathname = usePathname();
 
-   const getClassName = (href: string) => {
-     if (pathname === href || (pathname === "/shop" && href === "/shop")) {
-       return `${styles.title} ${styles.active}`;
-     }
-     return styles.title;
-   };
+  const getClassName = (href: string) => {
+    if (pathname === href || (pathname === "/shop" && href === "/shop")) {
+      return `${styles.title} ${styles.active}`;
+    }
+    return styles.title;
+  };
 
   return (
     <section className={styles.container}>
