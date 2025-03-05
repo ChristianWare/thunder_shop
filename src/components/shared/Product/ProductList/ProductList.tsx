@@ -2,6 +2,7 @@
 import Link from "next/link";
 import LayoutWrapper from "../../LayoutWrapper";
 import styles from "./ProductList.module.css";
+import ProductCard from "../ProductCard/ProductCard";
 
 interface Props {
   data: any;
@@ -10,8 +11,7 @@ interface Props {
 }
 
 export default function ProductList({ data, title, limit }: Props) {
-
-    const limitedData = limit ? data.slice(0, limit) : data;
+  const limitedData = limit ? data.slice(0, limit) : data;
 
   return (
     <section className={styles.container}>
@@ -24,8 +24,9 @@ export default function ProductList({ data, title, limit }: Props) {
         </div>
         {data.length > 0 ? (
           <div className={styles.content}>
-            {limitedData.map((product: any, index: number) => (
-              <div key={index}>{product.name}</div>
+            {limitedData.map((product: any) => (
+              //   <div key={index}>{product.name}</div>
+              <ProductCard key={product.slug} product={product} />
             ))}
           </div>
         ) : (

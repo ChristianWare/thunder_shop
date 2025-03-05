@@ -1,6 +1,6 @@
 import LayoutWrapper from "../../shared/LayoutWrapper";
 import styles from "./Hero.module.css";
-import ProductPreview from "../../shared/ProductPreview/ProductPreview";
+// import ProductPreview from "../../shared/ProductPreview/ProductPreview";
 import ScrollHorizontalText from "../../shared/ScrollHorizontalText/ScrollHorizontalText";
 import Thunder from "../../../../public/icons/lightning.svg";
 
@@ -23,9 +23,7 @@ export default function Hero() {
                 Your shop for bicycles <br /> and e-bikes in SWitzerland.
               </p>
             </div>
-            <div className={styles.right}>
-              <ProductPreview />
-            </div>
+            <div className={styles.right}>{/* <ProductPreview /> */}</div>
           </div>
         </div>
         <ScrollHorizontalText text='Returns extends over a period of 14 days' />

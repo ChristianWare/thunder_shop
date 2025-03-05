@@ -1,7 +1,7 @@
 import styles from './NewArrivals.module.css'
 import Link from "next/link";
 import LayoutWrapper from "../LayoutWrapper";
-import ProductPreview from "../ProductPreview/ProductPreview";
+// import ProductPreview from "../ProductPreview/ProductPreview";
 
 export default function NewArrivals() {
   return (
@@ -16,13 +16,13 @@ export default function NewArrivals() {
           </Link>
         </div>
         <div className={styles.content}>
+          {/* <ProductPreview />
           <ProductPreview />
           <ProductPreview />
           <ProductPreview />
           <ProductPreview />
           <ProductPreview />
-          <ProductPreview />
-          <ProductPreview />
+          <ProductPreview /> */}
         </div>
       </LayoutWrapper>
     </section>
