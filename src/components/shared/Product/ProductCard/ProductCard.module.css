@@ -11,14 +11,30 @@
   border: 1px solid var(--border);
   border-top: none;
   border-left: none;
+  transition: all 0.3s ease-in;
+}
+
+.container:hover {
+  background-color: var(--gray);
+}
+
+.top,
+.bottom {
+  width: 100%;
 }
 
 .link {
   width: 100%;
+  height: 100%;
 }
 
 .productName {
   width: 70%;
+  transition: all 0.3s ease-in;
+}
+
+.productName:hover {
+  text-decoration: underline;
 }
 
 .model {
@@ -31,11 +47,16 @@
   width: 100%;
   height: 340px;
   flex-grow: 1;
+  transition: all 0.3s ease-in;
 }
 
 .img {
   object-fit: contain;
   padding: 3rem;
+  transition: all 0.3s ease-in;
+}
+.img:hover {
+  scale: 1.05;
 }
 
 .details {

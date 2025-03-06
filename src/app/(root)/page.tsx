@@ -11,7 +11,7 @@ export default function Home() {
       <ProductList
         data={sampleData.products}
         title='New Arrivals'
-        limit={4}
+        // limit={4}
       />
     </main>
   );
