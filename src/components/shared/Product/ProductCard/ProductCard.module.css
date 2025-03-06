@@ -33,10 +33,6 @@
   transition: all 0.3s ease-in;
 }
 
-.productName:hover {
-  text-decoration: underline;
-}
-
 .model {
   text-transform: capitalize;
   opacity: 0.5;
@@ -55,8 +51,21 @@
   padding: 3rem;
   transition: all 0.3s ease-in;
 }
-.img:hover {
+
+.container:hover {
+  background-color: var(--gray);
+}
+
+.container:hover .img {
   scale: 1.05;
+}
+
+.container:hover .img {
+  scale: 1.05;
+}
+
+.container:hover .productName {
+  text-decoration: underline;
 }
 
 .details {
