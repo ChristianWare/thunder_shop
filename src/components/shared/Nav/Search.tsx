@@ -1,12 +1,13 @@
 "use client";
 
 import styles from "./Search.module.css";
-import { useRouter, useSearchParams } from "next/navigation";
+// import { useRouter, useSearchParams } from "next/navigation";
+import { useSearchParams } from "next/navigation";
 import SearchIcon from "../../../public/icons/search.svg";
-import { createUrl } from "@/lib/utils";
+// import { createUrl } from "@/lib/utils";
 
 export default function Search() {
-  const router = useRouter();
+  // const router = useRouter();
   const searchParams = useSearchParams();
 
   function onSubmit(e: React.FormEvent<HTMLFormElement>) {
@@ -23,7 +24,7 @@ export default function Search() {
       newParams.delete("q");
     }
 
-    router.push(createUrl("/search,", newParams));
+    // router.push(createUrl("/search,", newParams));
   }
 
   return (
