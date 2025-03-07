@@ -5,6 +5,7 @@ import Img1 from "../../../../public/images/login.jpg";
 import Check from "../../../../public/icons/check.svg";
 import Button from "@/components/shared/Button/Button";
 import { Metadata } from "next";
+import CredentialSignInForm from "./CredentialSignInForm/CredentialSignInForm";
 
 export const metadata: Metadata = {
   title: "Sign In",
@@ -46,6 +47,7 @@ export default function SignInPage() {
           <div className={styles.content}>
             <div className={styles.left}>
               <h1 className={styles.heading}>Login</h1>
+              <CredentialSignInForm />
             </div>
             <div className={styles.right}>
               <h2 className={styles.headingii}>Create an account</h2>
