@@ -32,14 +32,15 @@
 }
 
 .secondary {
-  color: var(--blue);
+  color: var(--white);
   border: 1px solid var(--gold);
-  background-color: var(--white);
+  background-color: var(--darkGray);
+  border-radius: 50px;
 }
 
 .secondary:hover {
-  color: var(--white);
-  background-color: var(--gold);
+  color: var(--black);
+  background-color: var(--white);
 }
 
 .navBtn {

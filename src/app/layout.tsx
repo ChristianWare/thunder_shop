@@ -12,7 +12,7 @@ import localFont from "next/font/local";
 const interTight = Inter_Tight({
   variable: "--interTight",
   subsets: ["latin"],
-  weight: ["400", "500", "600"],
+  weight: ["300", "400", "500", "600"],
 });
 
 const barlowCondensed = Barlow_Condensed({
