@@ -1,5 +1,5 @@
-import LayoutWrapper from "@/components/shared/LayoutWrapper";
 import styles from "./SignInPage.module.css";
+import LayoutWrapper from "@/components/shared/LayoutWrapper";
 import Image from "next/image";
 import Img1 from "../../../../public/images/login.jpg";
 import Check from "../../../../public/icons/check.svg";

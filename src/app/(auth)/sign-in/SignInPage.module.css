@@ -29,12 +29,18 @@
 .left {
   background-color: var(--white);
   padding: 3rem;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
 }
 
 .heading,
 .headingii {
   font-size: clamp(32px, 55 / 1400 * 100vw, 55px);
   letter-spacing: -1px;
+}
+
+.heading {
+  margin-bottom: 3rem;
 }
 
 .headingii {
@@ -75,8 +81,27 @@
   height: 2rem;
 }
 
-
 .btnContainer {
-    display: grid;
+  display: grid;
+  width: 100%;
+}
+
+@media screen and (max-width: 1068px) {
+  .content {
     width: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .content {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media screen and (max-width: 568px) {
+  .heading,
+  .headingii {
+    text-align: center;
+    width: 100%;
+  }
 }
