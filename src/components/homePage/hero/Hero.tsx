@@ -5,6 +5,7 @@ import styles from "./Hero.module.css";
 import ScrollHorizontalText from "../../shared/ScrollHorizontalText/ScrollHorizontalText";
 import Thunder from "../../../../public/icons/lightning.svg";
 import ProductCard from "@/components/shared/Product/ProductCard/ProductCard";
+// import Button from "@/components/shared/Button/Button";
 
 interface Props {
   data: any;
@@ -31,6 +32,7 @@ export default function Hero({ data, limit }: Props) {
               <p className={styles.copy}>
                 Your shop for bicycles <br /> and e-bikes in SWitzerland.
               </p>
+              {/* <Button text='test' btnType='primary' href='/' /> */}
             </div>
             <div className={styles.right}>
               {limitedData.map((product: any) => (

@@ -1,9 +1,22 @@
 import styles from "./Button.module.css";
 import { FC } from "react";
 import Link from "next/link";
-import { ButtonProps } from "../../lib/interface";
 
-const Button: FC<ButtonProps> = ({ href = "", text, btnType, target = "", onClick }) => {
+interface Props {
+  href: string;
+  text: string;
+  btnType: string;
+  target?: string;
+  onClick?: () => void;
+}
+
+const Button: FC<Props> = ({
+  href = "",
+  text,
+  btnType,
+  target = "",
+  onClick,
+}) => {
   return (
     <button className={styles.container} onClick={onClick}>
       <Link

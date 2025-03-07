@@ -7,6 +7,7 @@ import {
 import "./globals.css";
 import { ModalProvider } from "@/context/ModalContext";
 import { APP_NAME, APP_DESCRIPTION, SERVER_URL } from "@/lib/constants";
+import localFont from "next/font/local";
 
 const interTight = Inter_Tight({
   variable: "--interTight",
@@ -35,6 +36,14 @@ export const metadata: Metadata = {
   metadataBase: new URL(SERVER_URL),
 };
 
+// NeubauGroteskNor.woff2;
+
+const NeubauGroteskNor = localFont({
+  src: "../../public/fonts/NeubauGroteskNor.woff2",
+  variable: "--NeubauGroteskNor",
+  display: "swap",
+});
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -43,7 +52,7 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body
-        className={`${interTight.variable} ${barlowCondensed.variable} ${barlowSemiCondensed.variable}`}
+        className={`${interTight.variable} ${barlowCondensed.variable} ${barlowSemiCondensed.variable} ${NeubauGroteskNor.variable}`}
       >
         <ModalProvider>{children}</ModalProvider>
       </body>
