@@ -6,6 +6,8 @@ import Check from "../../../../public/icons/check.svg";
 import Button from "@/components/shared/Button/Button";
 import { Metadata } from "next";
 import CredentialSignInForm from "./CredentialSignInForm/CredentialSignInForm";
+import { auth } from "../../../../auth";
+import { redirect } from "next/navigation";
 
 export const metadata: Metadata = {
   title: "Sign In",
@@ -30,7 +32,21 @@ const data = [
   },
 ];
 
-export default function SignInPage() {
+export default async function SignInPage(props: {
+  searchParams: Promise<{
+    callbackUrl: string;
+  }>;
+}) {
+  const { callbackUrl } = await props.searchParams;
+
+  const session = await auth();
+
+  if (session) {
+    return redirect(callbackUrl || "/");
+  }
+
+  console.log(session);
+
   return (
     <section className={styles.container}>
       <div className={styles.imgOverlay}></div>
@@ -59,7 +75,11 @@ export default function SignInPage() {
                 ))}
               </ul>
               <div className={styles.btnContainer}>
-                <Button btnType='secondary' text='Create an account' href='#' />
+                <Button
+                  btnType='secondary'
+                  text='Create an account'
+                  href='/sign-up'
+                />
               </div>
             </div>
           </div>
