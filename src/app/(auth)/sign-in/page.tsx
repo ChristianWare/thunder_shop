@@ -45,7 +45,7 @@ export default async function SignInPage(props: {
     return redirect(callbackUrl || "/");
   }
 
-  console.log(session);
+  // console.log(session);
 
   return (
     <section className={styles.container}>
