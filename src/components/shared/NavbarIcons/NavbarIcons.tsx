@@ -21,7 +21,7 @@ export default async function NavbarIcons() {
       <div className={styles.cartParent}>
         <Cart className={styles.icon} />
         <span className={styles.counter}>
-          {/* {totalQuantity < 10 ? totalQuantity : "9+"} */}9
+          {/* {totalQuantity < 10 ? totalQuantity : "9+"} */}0
         </span>
       </div>
     </div>

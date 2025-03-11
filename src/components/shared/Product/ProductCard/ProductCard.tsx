@@ -18,7 +18,7 @@ export default function ProductCard({ product }: Props) {
         <div className={styles.bottom}>
           <div className={styles.imgContainer}>
             <Image
-              src={product.images[0]}
+              src={product.images[1]}
               alt={product.name}
               title={product.name}
               priority={true}
