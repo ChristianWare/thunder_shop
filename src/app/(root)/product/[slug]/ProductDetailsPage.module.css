@@ -21,6 +21,11 @@
   height: 100%;
 }
 
+.productName {
+  font-size: 5.5rem;
+  letter-spacing: -2px;
+}
+
 .leftContent {
   align-self: flex-start;
   position: -webkit-sticky;

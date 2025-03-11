@@ -1,9 +1,9 @@
+import styles from "./ProductDetailsPage.module.css";
 import Button from "@/components/shared/Button/Button";
 import LayoutWrapper from "@/components/shared/LayoutWrapper";
 import ProductImages from "@/components/shared/Product/ProductImages/ProductImages";
 import { getproductBySlug } from "@/lib/actions/product.actions";
 import { notFound } from "next/navigation";
-import styles from "./ProductDetailsPage.module.css";
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -25,7 +25,7 @@ export default async function ProductDetailsPage({ params }: PageProps) {
           </div>
           <div className={styles.right}>
             <div className={styles.rightContent}>
-              <h1>Product Details Page</h1>
+              <h1 className={styles.productName}>Product Details Page</h1>
               <p>{product.name}</p>
               <p>{product.brand}</p>
               <p>{product.category}</p>
