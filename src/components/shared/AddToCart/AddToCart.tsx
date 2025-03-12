@@ -18,7 +18,7 @@ export default function AddToCart({ item }: Props) {
     const res = await addItemToCart(item);
 
     if (!res.success) {
-      toast.error(res.message);
+      toast.error("there was an issue");
     } else {
       toast.success("Item added to cart");
     }
