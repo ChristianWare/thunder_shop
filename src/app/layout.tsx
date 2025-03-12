@@ -58,7 +58,7 @@ export default function RootLayout({
       >
         {/* <ModalProvider> */}
           <Toaster
-            position='top-center'
+            position='bottom-right'
             toastOptions={{
               className: "toastFont",
               duration: 6000,
