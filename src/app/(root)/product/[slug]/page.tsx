@@ -1,6 +1,6 @@
 import AddToCart from "@/components/shared/AddToCart/AddToCart";
 import styles from "./ProductDetailsPage.module.css";
-import Button from "@/components/shared/Button/Button";
+// import Button from "@/components/shared/Button/Button";
 import LayoutWrapper from "@/components/shared/LayoutWrapper";
 import ProductImages from "@/components/shared/Product/ProductImages/ProductImages";
 import { getproductBySlug } from "@/lib/actions/product.actions";
