@@ -5,9 +5,11 @@ import {
   Barlow_Semi_Condensed,
 } from "next/font/google";
 import "./globals.css";
-import { ModalProvider } from "@/context/ModalContext";
+// import { ModalProvider } from "@/context/ModalContext";
 import { APP_NAME, APP_DESCRIPTION, SERVER_URL } from "@/lib/constants";
 import localFont from "next/font/local";
+import { Toaster } from "react-hot-toast";
+
 
 const interTight = Inter_Tight({
   variable: "--interTight",
@@ -54,7 +56,22 @@ export default function RootLayout({
       <body
         className={`${interTight.variable} ${barlowCondensed.variable} ${barlowSemiCondensed.variable} ${NeubauGroteskNor.variable}`}
       >
-        <ModalProvider>{children}</ModalProvider>
+        {/* <ModalProvider> */}
+          <Toaster
+            position='top-center'
+            toastOptions={{
+              className: "toastFont",
+              duration: 6000,
+              style: {
+                border: "2px solid #295f4e",
+                borderRadius: "50px",
+                textAlign: "center",
+                whiteSpace: "nowrap",
+              },
+            }}
+          />
+          {children}
+        {/* </ModalProvider> */}
       </body>
     </html>
   );
