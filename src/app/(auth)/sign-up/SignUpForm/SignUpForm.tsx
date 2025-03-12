@@ -39,7 +39,6 @@ export default function SignUpForm() {
           id='name'
           name='name'
           type='text'
-          required
           defaultValue={signUpDefaultValues.name}
           autoComplete='off'
           maxLength={500}
@@ -52,8 +51,7 @@ export default function SignUpForm() {
         <input
           id='email'
           name='email'
-          type='email'
-          required
+          type='text'
           defaultValue={signUpDefaultValues.email}
           autoComplete='off'
           maxLength={500}
@@ -67,7 +65,6 @@ export default function SignUpForm() {
           id='password'
           name='password'
           type='password'
-          required
           defaultValue={signUpDefaultValues.password}
           autoComplete='new-password'
           maxLength={500}
@@ -81,7 +78,6 @@ export default function SignUpForm() {
           id='confirmPassword'
           name='confirmPassword'
           type='password'
-          required
           defaultValue={signUpDefaultValues.confirmPassword}
           autoComplete='confirmPassword'
           maxLength={500}
