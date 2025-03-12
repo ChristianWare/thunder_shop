@@ -15,15 +15,24 @@ interface Props {
 export default function AddToCart({ item }: Props) {
   //   const router = useRouter();
   const handleAddToCart = async () => {
-    const res = await addItemToCart(item);
-
-    if (!res.success) {
-      toast.error("there was an issue");
-    } else {
-      toast.success("Item added to cart");
+    try {
+      const res = await addItemToCart(item);
+      if (!res) {
+        toast.error("Failed to add item to cart");
+        return;
+      }
+      if (!res.success) {
+        // Ensure message is a string even if it's a Promise
+        const message =
+          typeof res.message === "string" ? res.message : await res.message;
+        toast.error(message);
+      } else {
+        toast.success("Item added to cart");
+      }
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    } catch (error) {
+      toast.error("An error occurred while adding the item to the cart");
     }
-
-    return;
   };
   // Handle success add to cart
 
